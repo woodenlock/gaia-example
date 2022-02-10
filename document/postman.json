@@ -1,0 +1,1385 @@
+{
+	"info": {
+		"_postman_id": "c1d09eb2-743e-4c53-82f9-19f280745f19",
+		"name": "gaia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gaia-example",
+			"item": [
+				{
+					"name": "school_info",
+					"item": [
+						{
+							"name": "id查询",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/info/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"info",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/info/test/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"info",
+										"test",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/info/7",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"info",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"国中\",\r\n    \"age\":30,\r\n    \"state\":0,\r\n    \"gmtCreate\":1600955200000,\r\n    \"remark\":\"swerewrgg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/info",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "分页",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"size\":10,\r\n    \"current\":1,\r\n    \"search\":{\r\n        \"state\":0\r\n    },\r\n    \"orders\":[{\r\n        \"column\":\"gmt_create\",\r\n        \"asc\":false\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/info/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"info",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1,\r\n    \"name\":\"小学\",\r\n    \"age\":60,\r\n    \"state\":0,\r\n    \"gmtCreate\":1635955200000,\r\n    \"remark\":\"ergeegttrrrhrh\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/info",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"info"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_college",
+					"item": [
+						{
+							"name": "id查询",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/college/582f1c3f-52bf-4522-9ece-9759cc8f231e",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"college",
+										"582f1c3f-52bf-4522-9ece-9759cc8f231e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/college/bae49a4d-a783-44d7-ab6d-d510186fa5cf",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"college",
+										"bae49a4d-a783-44d7-ab6d-d510186fa5cf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"schoolId\":1,\r\n    \"name\":\"数学学院\",\r\n    \"code\":\"0110\",\r\n    \"state\":1,\r\n    \"gmtFound\":1606955200000,\r\n    \"gmtEnd\":1606955200000,\r\n    \"gmtCreate\":1606955200000,\r\n    \"remark\":\"fsdfss\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/college",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"college"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "分页",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"size\":10,\r\n    \"current\":1,\r\n    \"search\":{\r\n        \"state\":0\r\n    },\r\n    \"orders\":[{\r\n        \"column\":\"gmtCreate\",\r\n        \"asc\":false\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/college/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"college",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"582f1c3f-52bf-4522-9ece-9759cc8f231e\",\r\n    \"schoolId\":1,\r\n    \"name\":\"待删除\",\r\n    \"code\":\"0103\",\r\n    \"state\":0,\r\n    \"gmtFound\":1600955200000,\r\n    \"gmtEnd\":1600955200000,\r\n    \"remark\":\"swerewrgg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/college",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"college"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_student",
+					"item": [
+						{
+							"name": "id查询",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/student/582f1c3f-52bf-4522-9ece-9759cc8f231e",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"student",
+										"582f1c3f-52bf-4522-9ece-9759cc8f231e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/student/bae49a4d-a783-44d7-ab6d-d510186fa5cf",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"student",
+										"bae49a4d-a783-44d7-ab6d-d510186fa5cf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"schoolId\":1,\r\n    \"name\":\"李四\",\r\n    \"age\":22,\r\n    \"state\":0,\r\n    \"gmtCreate\":1618955200000,\r\n    \"remark\":\"fsfsfsgf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/student",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"student"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "分页",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"size\":10,\r\n    \"current\":1,\r\n    \"search\":{\r\n        \"state\":0\r\n    },\r\n    \"orders\":[{\r\n        \"column\":\"gmtCreate\",\r\n        \"asc\":false\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/student/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"student",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"baNUn34BeJ4bmEX5X6xg\",\r\n    \"schoolId\":1,\r\n    \"name\":\"徐秀娟\",\r\n    \"age\":58,\r\n    \"state\":0,\r\n    \"gmtCreate\":1612955200000,\r\n    \"remark\":\"iyuiyiyiyuiyii\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/student",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"student"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_teacher",
+					"item": [
+						{
+							"name": "id查询",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/teacher/582f1c3f-52bf-4522-9ece-9759cc8f231e",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"teacher",
+										"582f1c3f-52bf-4522-9ece-9759cc8f231e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/teacher/bae49a4d-a783-44d7-ab6d-d510186fa5cf",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"teacher",
+										"bae49a4d-a783-44d7-ab6d-d510186fa5cf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"李四\",\r\n    \"age\":22,\r\n    \"state\":0,\r\n    \"gmtCreate\":1618955200000,\r\n    \"remark\":\"fsfsfsgf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/teacher",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"teacher"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "分页",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"size\":10,\r\n    \"current\":1,\r\n    \"search\":{\r\n        \"state\":0\r\n    },\r\n    \"orders\":[{\r\n        \"column\":\"gmtCreate\",\r\n        \"asc\":false\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/teacher/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"teacher",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"baNUn34BeJ4bmEX5X6xg\",\r\n    \"name\":\"徐秀娟\",\r\n    \"age\":58,\r\n    \"state\":0,\r\n    \"gmtCreate\":1612955200000,\r\n    \"remark\":\"iyuiyiyiyuiyii\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/teacher",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"teacher"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_course",
+					"item": [
+						{
+							"name": "id查询",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/course/3ad65a68-092f-451c-bc87-d57da4244c22",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"course",
+										"3ad65a68-092f-451c-bc87-d57da4244c22"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/course/bae49a4d-a783-44d7-ab6d-d510186fa5cf",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"course",
+										"bae49a4d-a783-44d7-ab6d-d510186fa5cf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"schoolId\":1,\r\n    \"schoolTeacherId\":2,\r\n    \"name\":\"数据库原理\",\r\n    \"code\":\"0303\",\r\n    \"state\":0,\r\n    \"necessary\":1,\r\n    \"gmtStart\":1606955200000,\r\n    \"gmtEnd\":1606955200000,\r\n    \"address\":\"15号综合教学楼507\",\r\n    \"gmtCreate\":1606955200000,\r\n    \"remark\":\"fsdgfggfgd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/course",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"course"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "分页",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"size\":10,\r\n    \"current\":1,\r\n    \"search\":{\r\n        \"state\":0\r\n    },\r\n    \"orders\":[{\r\n        \"column\":\"gmtCreate\",\r\n        \"asc\":false\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/course/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"course",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"582f1c3f-52bf-4522-9ece-9759cc8f231e\",\r\n    \"schoolId\":1,\r\n    \"schoolTeacherId\":1,\r\n    \"name\":\"马克思主义及其与中国现代化的意义\",\r\n    \"code\":\"0101\",\r\n    \"state\":0,\r\n    \"necessary\":0,\r\n    \"gmtStart\":1600955200000,\r\n    \"gmtEnd\":1600955200000,\r\n    \"address\":\"24号综合教学楼202\",\r\n    \"gmtCreate\":1600955200000,\r\n    \"remark\":\"fsdsf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/course",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"course"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_address",
+					"item": [
+						{
+							"name": "id查询",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/address/5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"address",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/address/4",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"address",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"schoolId\":1,\r\n    \"province\":\"浙江省\",\r\n    \"city\":\"杭州市\",\r\n    \"area\":\"滨江区\",\r\n    \"street\":\"滨兴街道\",\r\n    \"detail\":\"彩虹快速路199号\",\r\n    \"state\":0,\r\n    \"gmtCreate\":1600955200000,\r\n    \"remark\":\"swerewrgg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/address",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "分页",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"size\":10,\r\n    \"current\":1,\r\n    \"search\":{\r\n        \"state\":0\r\n    },\r\n    \"orders\":[{\r\n        \"column\":\"gmt_create\",\r\n        \"asc\":false\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/address/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"address",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1,\r\n    \"schoolId\":1,\r\n    \"province\":\"浙江省\",\r\n    \"city\":\"杭州市\",\r\n    \"area\":\"滨江区\",\r\n    \"street\":\"滨兴街道\",\r\n    \"detail\":\"彩虹快速路199号\",\r\n    \"state\":0,\r\n    \"gmtCreate\":1600955200000,\r\n    \"remark\":\"ytjtyjtjtj\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/address",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"address"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_account",
+					"item": [
+						{
+							"name": "id查询",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/account/61938f954cfb9720855c5b57",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"account",
+										"61938f954cfb9720855c5b57"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/address/4",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"address",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"schoolId\":1,\r\n    \"province\":\"浙江省\",\r\n    \"city\":\"杭州市\",\r\n    \"area\":\"滨江区\",\r\n    \"street\":\"滨兴街道\",\r\n    \"detail\":\"彩虹快速路199号\",\r\n    \"state\":0,\r\n    \"gmtCreate\":1600955200000,\r\n    \"remark\":\"swerewrgg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/address",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "分页",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"size\":10,\r\n    \"current\":1,\r\n    \"search\":{\r\n        \"state\":0\r\n    },\r\n    \"orders\":[{\r\n        \"column\":\"gmt_create\",\r\n        \"asc\":false\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/address/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"address",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1,\r\n    \"schoolId\":1,\r\n    \"province\":\"浙江省\",\r\n    \"city\":\"杭州市\",\r\n    \"area\":\"滨江区\",\r\n    \"street\":\"滨兴街道\",\r\n    \"detail\":\"彩虹快速路199号\",\r\n    \"state\":0,\r\n    \"gmtCreate\":1600955200000,\r\n    \"remark\":\"ytjtyjtjtj\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/address",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"address"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_building",
+					"item": [
+						{
+							"name": "id查询",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/building/61ea7ded2d2e245a1a1019f1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"building",
+										"61ea7ded2d2e245a1a1019f1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/school/building/61ea7ded2d2e245a1a1019f1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"building",
+										"61ea7ded2d2e245a1a1019f1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"schoolId\":1,\r\n    \"schoolAddressId\":1,\r\n    \"buildingType\":1,\r\n    \"price\":30000000.00,\r\n    \"floorArea\":5000000.00,\r\n    \"availableArea\":72000000.00,\r\n    \"state\":1,\r\n    \"gmtCreate\":1600955200000,\r\n    \"remark\":\"vd5y56uy5uh\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/building",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"building"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "分页",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"size\":5,\r\n    \"current\":0,\r\n    \"search\":{\r\n        \"state\": 1\r\n    },\r\n    \"orders\":[{\r\n        \"column\":\"gmt_create\",\r\n        \"asc\":false\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/building/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"building",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"61ea7c59481b48521238d4b1\",\r\n    \"schoolId\":1,\r\n    \"schoolAddressId\":1,\r\n    \"buildingType\":0,\r\n    \"price\":10000000.00,\r\n    \"floorArea\":2000000.00,\r\n    \"availableArea\":12000000.00,\r\n    \"state\":0,\r\n    \"gmtCreate\":1600955200000,\r\n    \"remark\":\"htyjtyjyttj\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/building",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"building"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_course_search",
+					"item": [
+						{
+							"name": "计数",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/course/searchCount",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"course",
+										"searchCount"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "搜索",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/course/search",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"course",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "搜索1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keys\":[\r\n        \"6cdce604-ecf4-4b34-a402-c77c4cb65f08\", \"3ad65a68-092f-451c-bc87-d57da4244c22\"\r\n    ],\r\n    \"props\":[\r\n        \"schoolId\", \"name\",\"state\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/course/search1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"course",
+										"search1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "搜索2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keys\":[\r\n        \"6cdce604-ecf4-4b34-a402-c77c4cb65f08\", \"3ad65a68-092f-451c-bc87-d57da4244c22\"\r\n    ],\r\n    \"props\":[\r\n        \"schoolId\", \"name\",\"state\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/course/search2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"course",
+										"search2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_building_search",
+					"item": [
+						{
+							"name": "计数",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/building/searchCount",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"building",
+										"searchCount"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "搜索",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/building/search",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"building",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "搜索1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keys\":[\r\n        \"61ea7c59481b48521238d4b1\", \"61ea7dbf2d2e245a1a1019ea\"\r\n    ],\r\n    \"props\":[\r\n        \"schoolId\", \"schoolAddressId\",\"state\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/building/search1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"building",
+										"search1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "搜索2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keys\":[\r\n        \"61ea7c59481b48521238d4b1\", \"61ea7dbf2d2e245a1a1019ea\"\r\n    ],\r\n    \"props\":[\r\n        \"schoolId\", \"schoolAddressId\",\"state\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/building/search2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"building",
+										"search2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "school_student_search",
+					"item": [
+						{
+							"name": "计数",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/student/searchCount",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"student",
+										"searchCount"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "搜索",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/student/search",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"student",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "搜索1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keys\":[\r\n        \"aaNSn34BeJ4bmEX5JKz5\", \"bKNTn34BeJ4bmEX54KzF\"\r\n    ],\r\n    \"props\":[\r\n        \"id\",\"schoolId\", \"name\",\"state\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/student/search1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"student",
+										"search1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "搜索2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keys\":[\r\n        \"aaNSn34BeJ4bmEX5JKz5\", \"bKNTn34BeJ4bmEX54KzF\"\r\n    ],\r\n    \"props\":[\r\n        \"schoolId\", \"name\",\"state\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/school/student/search2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"school",
+										"student",
+										"search2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
